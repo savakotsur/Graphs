@@ -1,31 +1,33 @@
 #pragma once
-#include<vector>
 #include <math.h>
+
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
 class Cell {
-private:
+   private:
     int X;
     int Y;
-public:
-    pair<int,int> offset;
+
+   public:
+    pair<int, int> offset;
     int distanceFromSt = 0;
     int weight = 0;
-    
+
     Cell(int x, int y);
     int getX();
     int getY();
 };
 
-class Map
-{
-private:
-    vector<vector<int>> matrix;
+class Map {
+   private:
+    vector<vector<int> > matrix;
     int size;
-public:
-    Map(vector<vector<int>> m);
+
+   public:
+    Map(vector<vector<int> > m);
     int getHeight(int x, int y);
     int getSize();
     int distance(Cell a, Cell b);
